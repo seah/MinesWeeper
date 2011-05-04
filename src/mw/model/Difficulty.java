@@ -7,6 +7,7 @@ public enum Difficulty {
 	int cols;
 	int anzahlMinen;
 	int anzahlRestMinen;
+<<<<<<< HEAD
 	
 	private Difficulty(int rows, int cols, int anzahlMinen) {
 		this.rows = rows;
@@ -54,3 +55,57 @@ public enum Difficulty {
 		return anzahlRestMinen;
 	}
 }
+=======
+
+	private Difficulty(int rows, int cols, int anzahlMinen) {
+		this.rows = rows;
+		this.cols = cols;
+		this.anzahlMinen = anzahlMinen;
+		this.anzahlRestMinen = anzahlMinen;
+	}
+	/**
+	 * Anhand des String wird der Enum Wert ermittelt und zurück gegeben
+	 * @param name
+	 * @return Enum
+	 */
+	public static Difficulty fromString(String name) {
+		if (Difficulty.class != null && name != null) {
+			try {
+				return Enum.valueOf(Difficulty.class, name.trim().toUpperCase());
+			} catch (IllegalArgumentException ex) {
+			}
+		}
+
+		return null;
+	}
+
+	/**
+	 * @return the rows
+	 */
+	public int getRows() {
+		return rows;
+	}
+
+	/**
+	 * @return the cols
+	 */
+	public int getCols() {
+		return cols;
+	}
+
+	/**
+	 * @return the anzahlMinen
+	 */
+	public int getAnzahlMinen() {
+		return anzahlMinen;
+	}
+
+	/**
+	 * @return the anzahlRestMinen
+	 */
+	public int getAnzahlRestMinen() {
+		return anzahlRestMinen;
+	}
+
+}
+>>>>>>> refs/heads/DevMitSpring
